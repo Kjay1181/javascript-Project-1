@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+  #one{
+     background-color:orange;
+        width:500px;
+        height:500px;
+        float:left;
+  }
+</style>
+</head>
+
+<body>
+  <input type="number" id="quantity">
+<script>
+var spicyAhi={
+  fishType:"ahi",
+  sauce:"sirachi and mayo",
+  price:29.75,
+  ounces:8,
+  rice:"white"
+};
+function buyMe(){
+  
+  var qty= document.getElementById('quantity').value;
+  var total=((qty*spicyAhi.price)*1.04712).toFixed(2);
+ document.getElementById('one').innerHTML="You owe" +total;
+}
+</script>
+<button onclick="buyMe()">Click here</button>
+<div id="one"></div>
+</body>
+</html>

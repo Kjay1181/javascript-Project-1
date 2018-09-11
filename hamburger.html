@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <style>
+  
+    </style>
+  </head>
+  <body>
+    <script>
+      var hamburger={
+        name:"Kams famous buns",
+        bun:["Plain","Sesame","whole wheat"],
+        cheese:["american","mozzarella","bleu cheese"],
+        meat:["pork","beef","chicken"],
+        veg:["pickles","lettuce","cucumber","tomatoes"],
+        mustard:true,
+        ketchup:true,
+        mayo:true,
+        price:10,
+        ounces:3
+        
+      }
+      
+      
+      function randoBurger(){
+        var ranBun= Math.floor(Math.random()*hamburger.bun.length);
+        var ranCheese= Math.floor(Math.random()*hamburger.cheese.length);
+        var ranVeg= Math.floor(Math.random()*hamburger.veg.length);
+        var ranMeat= Math.floor(Math.random()*hamburger.meat.length);
+    
+      var askMayo= prompt('DO YOU WANT MAYO Mothasuckaz? Y or N');
+      askMayo.toLowerCase();
+      if((askMayo=== 'n')&&(hamburger.mayo=== true)){
+        document.getElementById('hamburgerFinal').innerHMTL="Sorry has mayo";
+        return;
+      }
+        var askMustard=prompt('DO YOU WANT MUSTARD Mothasuckaz? Y or N');
+      askMustard.toLowerCase();
+      if((askMustard=== 'n') && (hamburger.mustard === true)){
+       document.getElementById('hamburgerFinal').innerHMTL='Sorry has mustard';
+        return;
+      }
+        var askKetchup=prompt('DO YOU WANT KETCHUP Mothasuckaz? Y or N');
+       askKetchup.toLowerCase();
+      if(( askKetchup=== 'n')&&(hamburger.ketchup=== true)){
+        document.getElementById('hamburgerFinal').innerHMTL='Sorry has ketchup';
+        return;
+      }
+    document.getElementById('hamburgerFinal').innerHTML="you are going to eat a" + hamburger.bun[ranBun]+" "+ hamburger.meat[ranMeat]+" "+ hamburger.cheese[ranCheese]+" "+ hamburger.veg[ranVeg]+" burger.";
+    
+      }
+      
+        
+  
+    </script>
+    <button onclick="randoBurger()">Click Me</button>
+    <p id="hamburgerFinal"></p>
+  </body>
+  
+</html>
