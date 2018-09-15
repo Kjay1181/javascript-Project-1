@@ -1,14 +1,33 @@
-var hamburger={
-        name:"Kams famous buns",
-        bun:["Plain","Sesame","whole wheat"],
-        cheese:["american","mozzarella","bleu cheese"],
-        meat:["pork","beef","chicken"],
-        veg:["pickles","lettuce","cucumber","tomatoes"],
-        mustard:true,
-        ketchup:true,
-        mayo:true,
-        price:10,
-        ounces:3
+var spicyBurger={
+        Name:"Good Burger",
+        Meat:"beef",
+        veggies:"onions",
+        cheese:"american",
+        buns:"wheat",
+        price:"7.25",
+        ounces:"8oz"
         
-      }
+        
+      };
+
+     var mildBurger={
+        Name:"Good Burger",
+        Meat:"beef",
+        veggies:" tomatoes",
+        cheese:"american",
+        buns:"wheat",
+        price:"7.25",
+        ounces:"8oz" }
+             
+             
       
+           function buyMe(){
+  var total=(spicyBurger.price*1.04712).toFixed(2);
+ document.getElementById('spicyHere').innerHTML="You owe $" +total;
+}
+     
+ function purchase(){
+  var total=(mildBurger.price*1.04712).toFixed(2);
+ document.getElementById('mildHere').innerHTML="You owe $" +total;
+}
+    
