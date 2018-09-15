@@ -2,18 +2,20 @@
   
   <head>
     <style>
-      #one{
+      #ham{
         background-color:orange;
         width:500px;
         height:500px;
         float:left;
+      
       }
       
-      #two {
+      #burger {
         background-color:green;
         width:500px;
         height:500px;
         float:left;
+        
     
       }
     </style>
@@ -23,8 +25,16 @@
       
     </script>
     <h1>Burger Menu</h1>
-    <div id="one"></div>
-    <div id="two"></div>
+    <div id="ham"><button onclick="buyMe()">Click here</button>
+<h1 id="spicyHere"></h1>
+    <p id="one"></p>
+    </div>
+    
+    <div id="burger">
+      <button onclick="purchase()">Click Here</button>
+      <h1 id="mildHere"></h1>
+      <p id="two"></p>
+      </div>
 
   </body>
 </html>
