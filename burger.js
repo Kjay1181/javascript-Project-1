@@ -1,33 +1,37 @@
 var spicyBurger={
-        Name:"Good Burger",
-        Meat:"beef",
-        veggies:"onions",
-        cheese:"american",
-        buns:"wheat",
-        price:"7.25",
-        ounces:"8oz"
+        Name:"Chicken Burger",
+        Meat:"whale",
+        Veggies:"onions",
+        Cheese:"american",
+        Buns:"wheat",
+        Price:"7.25",
+        Ounces:"8oz"
         
         
       };
 
      var mildBurger={
-        Name:"Good Burger",
+        Name:"Beef Burger",
         Meat:"beef",
-        veggies:" tomatoes",
-        cheese:"american",
-        buns:"wheat",
-        price:"7.25",
-        ounces:"8oz" }
+        Veggies:" tomatoes",
+        Cheese:"american",
+        Buns:"wheat",
+        Price:"10",
+        Ounces:"8oz" };
              
-             
+             function populate(){
+                document.getElementById('one').innerHTML=mildBurger.Name+"<br>"+mildBurger.Meat+"<br>"+ mildBurger.Veggies+"<br>"+mildBurger.Cheese+"<br>"+mildBurger.Buns+"<br>"+mildBurger.Ounces+"<br>"+mildBurger.Price;
+               
+                document.getElementById('two').innerHTML=spicyBurger.Name+"<br>"+spicyBurger.Meat+"<br>"+spicyBurger.Veggies+"<br>"+spicyBurger.Cheese+"<br>"+spicyBurger.Buns+"<br>"+spicyBurger.Price+"<br>"+spicyBurger.Ounces;
+             }
       
            function buyMe(){
-  var total=(spicyBurger.price*1.04712).toFixed(2);
+  var total=(spicyBurger.Price*1.04712).toFixed(2);
  document.getElementById('spicyHere').innerHTML="You owe $" +total;
 }
      
  function purchase(){
-  var total=(mildBurger.price*1.04712).toFixed(2);
+  var total=(mildBurger.Price*1.04712).toFixed(2);
  document.getElementById('mildHere').innerHTML="You owe $" +total;
 }
     
